@@ -19,15 +19,14 @@ const PROJECTS: Record<string, ProjectData> = {
     subtitle: "SHINRA BANSHŌ",
     description: "万物有灵，山川草木皆有所寄。",
     images: [
-      "/images/senluo/IMG_9915.PNG",
-      "/images/senluo/IMG_9897.PNG",
-      "/images/senluo/IMG_9907.PNG",
-      "/images/senluo/IMG_9908.PNG",
-      "/images/senluo/Image_1775984966053_606.png",
-      "/images/senluo/Image_1775984973251_489.png",
-      "/images/senluo/Image_1775984983609_704.png",
-      "/images/senluo/Image_1775984993638_241.png",
-      "/images/senluo/Image_1776004691064_55.png",
+      "https://i.postimg.cc/XYYFhCvf/Image-1775984966053-606.png",
+      "https://i.postimg.cc/4x2tTxK5/Image-1775984973251-489.png",
+      "https://i.postimg.cc/3xfpHxyf/Image-1775984983609-704.png",
+      "https://i.postimg.cc/P55Zcwqc/Image-1775984993638-241.png",
+      "https://i.postimg.cc/Hkv5CkJz/Image-1776004691064-55.png",
+      "https://i.postimg.cc/FHCcQHdQ/IMG-9897.png",
+      "https://i.postimg.cc/dVNdKVkV/IMG-9907.png",
+      "https://i.postimg.cc/TPyb2vgx/IMG-9908.png",
     ],
   },
   fanhua: {
@@ -35,15 +34,14 @@ const PROJECTS: Record<string, ProjectData> = {
     subtitle: "FLOWER HYMN",
     description: "以花为语，以色为诗。",
     images: [
-      "/images/fanhua/IMG_9916.PNG",
-      "/images/fanhua/IMG_9872.PNG",
-      "/images/fanhua/IMG_9873.PNG",
-      "/images/fanhua/IMG_9874.PNG",
-      "/images/fanhua/IMG_9882.PNG",
-      "/images/fanhua/IMG_9910.PNG",
-      "/images/fanhua/IMG_9911.PNG",
-      "/images/fanhua/IMG_9914.PNG",
-      "/images/fanhua/Image_1776004263566_999.png",
+      "https://i.postimg.cc/bNHH4P9G/Image-1776004263566-999.png",
+      "https://i.postimg.cc/6QTr7vJX/IMG-9872.png",
+      "https://i.postimg.cc/0NrY6wgL/IMG-9873.png",
+      "https://i.postimg.cc/pLsQXBSg/IMG-9874.png",
+      "https://i.postimg.cc/RZg1VTYL/IMG-9882.png",
+      "https://i.postimg.cc/jj9zySt5/IMG-9910.png",
+      "https://i.postimg.cc/DzDq1wnq/IMG-9911.png",
+      "https://i.postimg.cc/QMPpcdh4/IMG-9914.png",
     ],
   },
   xinghuan: {
@@ -51,15 +49,14 @@ const PROJECTS: Record<string, ProjectData> = {
     subtitle: "ORBITAL PULSE",
     description: "星轨流转，律动成章。",
     images: [
-      "/images/xinghuan/IMG_9918.PNG",
-      "/images/xinghuan/IMG_9888.PNG",
-      "/images/xinghuan/IMG_9889.PNG",
-      "/images/xinghuan/IMG_9890.PNG",
-      "/images/xinghuan/IMG_9894.PNG",
-      "/images/xinghuan/IMG_9896.PNG",
-      "/images/xinghuan/IMG_9919.PNG",
-      "/images/xinghuan/IMG_9931.PNG",
-      "/images/xinghuan/Image_1776004707368_226.png",
+      "https://i.postimg.cc/q7CtVXHx/Image-1776004707368-226.png",
+      "https://i.postimg.cc/KzS1ZkmW/IMG-9888.png",
+      "https://i.postimg.cc/NMqKg9QP/IMG-9889.png",
+      "https://i.postimg.cc/85Q71JTy/IMG-9890.png",
+      "https://i.postimg.cc/nzbXHjnR/IMG-9894.png",
+      "https://i.postimg.cc/d1PhqkqK/IMG-9896.png",
+      "https://i.postimg.cc/ZRtWTBTJ/IMG-9919.png",
+      "https://i.postimg.cc/W3GhtN4C/IMG-9931.png",
     ],
   },
   xinxiang: {
@@ -67,16 +64,15 @@ const PROJECTS: Record<string, ProjectData> = {
     subtitle: "INNER PROJECTION",
     description: "心之所象，投影于外。",
     images: [
-      "/images/xinxiang/IMG_9934.PNG",
-      "/images/xinxiang/IMG_9917.PNG",
-      "/images/xinxiang/IMG_9932.PNG",
-      "/images/xinxiang/IMG_9933.PNG",
-      "/images/xinxiang/Image_1775984960284_775.png",
-      "/images/xinxiang/Image_1776004603932_994.png",
-      "/images/xinxiang/Image_1776004608228_607.png",
-      "/images/xinxiang/Image_1776004660909_379.png",
-      "/images/xinxiang/Image_1776004672464_83.png",
-      "/images/xinxiang/Image_1776004720963_127.png",
+      "https://i.postimg.cc/L5SgVq7N/Image-1775984960284-775.png",
+      "https://i.postimg.cc/FzxdCr5B/Image-1776004603932-994.png",
+      "https://i.postimg.cc/FzxdCr5w/Image-1776004608228-607.png",
+      "https://i.postimg.cc/sxJQHjCF/Image-1776004660909-379.png",
+      "https://i.postimg.cc/hv0zZDRB/Image-1776004672464-83.png",
+      "https://i.postimg.cc/wx5mjVyL/Image-1776004720963-127.png",
+      "https://i.postimg.cc/tRdx45ZB/IMG-9932.png",
+      "https://i.postimg.cc/595C23YK/IMG-9933.png",
+      "https://i.postimg.cc/XNKCY8Gh/IMG-9934.png",
     ],
   },
 };
@@ -121,6 +117,8 @@ export default function ProjectDetail({ projectId, onBack }: ProjectDetailProps)
               <img
                 src={src}
                 alt={`${project.title}-${i + 1}`}
+                loading="lazy"
+                referrerPolicy="no-referrer"
                 className="w-full h-auto object-contain pixel-border-sm"
                 style={{ imageRendering: "pixelated" }}
               />
