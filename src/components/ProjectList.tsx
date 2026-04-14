@@ -24,12 +24,12 @@ export default function ProjectList({ onSelect, onNext }: ProjectListProps) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen bg-white p-8 md:p-20 relative"
+      className="min-h-screen bg-white px-8 md:px-20 pt-6 md:pt-10 pb-20 relative"
     >
       <div className="absolute inset-0 scanlines opacity-10 pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto">
-        <div className="flex justify-between items-end mb-16">
+        <div className="flex justify-between items-end mb-6">
           <div>
             <span className="text-[10px] opacity-50 block mb-2 tracking-[0.3em]">/ 02</span>
             <h2 className="text-5xl font-pixel-cn tracking-tight">执裁录</h2>

@@ -72,9 +72,6 @@ export default function EndPage() {
                 style={{ imageRendering: "pixelated" }}
               />
             </div>
-            <span className="mt-3 text-[9px] tracking-[0.3em] opacity-60 font-pixel group-hover:opacity-100">
-              SCAN / VISIT &gt;
-            </span>
           </a>
         </motion.div>
       </div>
