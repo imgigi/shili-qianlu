@@ -64,15 +64,15 @@ const PROJECTS: Record<string, ProjectData> = {
     subtitle: "INNER PROJECTION",
     description: "心之所象，投影于外。",
     images: [
+      "https://i.postimg.cc/tRdx45ZB/IMG-9932.png",
+      "https://i.postimg.cc/595C23YK/IMG-9933.png",
+      "https://i.postimg.cc/XNKCY8Gh/IMG-9934.png",
       "https://i.postimg.cc/L5SgVq7N/Image-1775984960284-775.png",
       "https://i.postimg.cc/FzxdCr5B/Image-1776004603932-994.png",
       "https://i.postimg.cc/FzxdCr5w/Image-1776004608228-607.png",
       "https://i.postimg.cc/sxJQHjCF/Image-1776004660909-379.png",
       "https://i.postimg.cc/hv0zZDRB/Image-1776004672464-83.png",
       "https://i.postimg.cc/wx5mjVyL/Image-1776004720963-127.png",
-      "https://i.postimg.cc/tRdx45ZB/IMG-9932.png",
-      "https://i.postimg.cc/595C23YK/IMG-9933.png",
-      "https://i.postimg.cc/XNKCY8Gh/IMG-9934.png",
     ],
   },
 };
@@ -86,7 +86,7 @@ export default function ProjectDetail({ projectId, onBack }: ProjectDetailProps)
       initial={{ opacity: 0, x: 80 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -80 }}
-      className="min-h-screen bg-[#f0ead6] p-8 md:p-20 relative"
+      className="min-h-screen bg-white p-8 md:p-20 relative"
     >
       <div className="absolute inset-0 scanlines opacity-10 pointer-events-none" />
 

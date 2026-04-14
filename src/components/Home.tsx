@@ -27,7 +27,7 @@ export default function Home({ onNext }: HomeProps) {
           style={{ imageRendering: "pixelated" }}
         />
         {/* Fade lower half to page background */}
-        <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-[#f0ead6] via-[#f0ead6]/70 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-white via-white/70 to-transparent" />
         <div className="absolute inset-0 scanlines opacity-25" />
       </motion.div>
 

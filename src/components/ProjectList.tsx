@@ -2,46 +2,15 @@ import { motion } from "motion/react";
 
 interface Project {
   id: string;
-  title: string;
-  subtitle: string;
   image: string;
-  description: string;
-  tags: string[];
+  offsetY: string;
 }
 
 const PROJECTS: Project[] = [
-  {
-    id: "senluo",
-    title: "森罗万象",
-    subtitle: "SHINRA BANSHŌ",
-    image: "/images/covers/senluo.png",
-    description: "STAGE 01 — 万物有灵 / 画面探索",
-    tags: ["ILLUST", "WORLD"],
-  },
-  {
-    id: "fanhua",
-    title: "繁花颂歌",
-    subtitle: "FLOWER HYMN",
-    image: "/images/covers/fanhua.png",
-    description: "STAGE 02 — 花语与颂诗 / 视觉设计",
-    tags: ["VISUAL", "COLOR"],
-  },
-  {
-    id: "xinghuan",
-    title: "星环律动",
-    subtitle: "ORBITAL PULSE",
-    image: "/images/covers/xinghuan.png",
-    description: "STAGE 03 — 星轨与节律 / 动态图形",
-    tags: ["MOTION", "GRID"],
-  },
-  {
-    id: "xinxiang",
-    title: "心象投影",
-    subtitle: "INNER PROJECTION",
-    image: "/images/covers/xinxiang.png",
-    description: "STAGE 04 — 内观与呈相 / 概念艺术",
-    tags: ["CONCEPT", "INNER"],
-  },
+  { id: "senluo",   image: "/images/covers/senluo.png",   offsetY: "mt-0"  },
+  { id: "fanhua",   image: "/images/covers/fanhua.png",   offsetY: "mt-24" },
+  { id: "xinghuan", image: "/images/covers/xinghuan.png", offsetY: "mt-8"  },
+  { id: "xinxiang", image: "/images/covers/xinxiang.png", offsetY: "mt-32" },
 ];
 
 interface ProjectListProps {
@@ -55,17 +24,17 @@ export default function ProjectList({ onSelect, onNext }: ProjectListProps) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen bg-[#f0ead6] p-8 md:p-20 relative"
+      className="min-h-screen bg-white p-8 md:p-20 relative"
     >
       <div className="absolute inset-0 scanlines opacity-10 pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto">
-        <div className="flex justify-between items-end mb-12">
+        <div className="flex justify-between items-end mb-16">
           <div>
             <span className="text-[10px] opacity-50 block mb-2 tracking-[0.3em]">/ 02</span>
-            <h2 className="text-5xl font-pixel-cn tracking-tight">SELECTED WORKS</h2>
+            <h2 className="text-5xl font-pixel-cn tracking-tight">执裁录</h2>
             <p className="mt-4 text-xs opacity-70 max-w-md font-pixel-cn leading-relaxed">
-              点击每一张封面，进入对应项目详情。
+              以星象捕风格碎片，以匠心织时代衣魂。
             </p>
           </div>
           <button
@@ -76,40 +45,25 @@ export default function ProjectList({ onSelect, onNext }: ProjectListProps) {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 items-start">
           {PROJECTS.map((project, index) => (
-            <motion.div
+            <motion.button
               key={project.id}
-              initial={{ opacity: 0, y: 40 }}
+              type="button"
+              initial={{ opacity: 0, y: 60 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.35, duration: 0.5 }}
-              whileHover={{ y: -8 }}
-              className="bg-white p-4 pixel-border cursor-pointer group"
+              transition={{ delay: index * 0.6, duration: 0.9, ease: "easeOut" }}
+              whileHover={{ y: -10, transition: { duration: 0.25 } }}
               onClick={() => onSelect(project.id)}
+              className={`${project.offsetY} block w-full cursor-pointer bg-transparent border-0 p-0`}
             >
-              <div className="aspect-[4/3] bg-gray-100 mb-4 overflow-hidden pixel-border-sm">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  style={{ imageRendering: "pixelated" }}
-                />
-              </div>
-              <div className="flex justify-between items-start mb-2">
-                <span className="text-[9px] opacity-40 tracking-[0.2em]">{project.subtitle}</span>
-                <span className="text-[9px] opacity-40 tracking-[0.2em]">VIEW &gt;</span>
-              </div>
-              <h3 className="text-xl font-pixel-cn mb-2">{project.title}</h3>
-              <p className="text-[10px] opacity-60 leading-relaxed font-pixel-cn">{project.description}</p>
-
-              <div className="mt-4 flex gap-2">
-                {project.tags.map((t) => (
-                  <span key={t} className="px-2 py-1 bg-gray-100 text-[8px] tracking-widest">
-                    {t}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
+              <img
+                src={project.image}
+                alt=""
+                className="w-full h-auto object-contain"
+                style={{ imageRendering: "pixelated" }}
+              />
+            </motion.button>
           ))}
         </div>
       </div>

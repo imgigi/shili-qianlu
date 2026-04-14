@@ -6,7 +6,7 @@ export default function EndPage() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen bg-[#e8e1c8] flex items-center justify-center p-8 relative"
+      className="min-h-screen bg-white flex items-center justify-center p-8 relative"
     >
       <div className="absolute inset-0 scanlines opacity-15 pointer-events-none" />
 
@@ -33,8 +33,9 @@ export default function EndPage() {
 
           <div className="w-full text-center">
             <div className="h-px w-12 bg-black/70 mx-auto mb-4" />
-            <p className="text-[10px] tracking-[0.3em] opacity-70 font-pixel">SHILI QIANLU</p>
-            <p className="text-[9px] opacity-50 mt-2 font-pixel-cn">十里不辞远 · 千路皆可期</p>
+            <p className="text-[11px] opacity-70 font-pixel-cn leading-relaxed">
+              衣载时代<br />梦藏衣冠
+            </p>
           </div>
         </motion.div>
 
@@ -49,10 +50,9 @@ export default function EndPage() {
 
           <div>
             <span className="text-[10px] tracking-[0.3em] opacity-50">/ END</span>
-            <h3 className="text-5xl font-pixel-cn mt-4 leading-tight">THANK&nbsp;YOU<br />FOR&nbsp;WALKING</h3>
-            <p className="mt-6 text-xs opacity-70 font-pixel-cn leading-relaxed max-w-sm">
-              十里千路，步履不停。<br />
-              感谢你陪我看完这段像素旅程。
+            <h3 className="text-5xl font-pixel-cn mt-4 leading-tight">织梦司入口</h3>
+            <p className="mt-6 text-sm opacity-70 font-pixel-cn leading-relaxed max-w-sm">
+              此间织梦司，为衣而驻，为梦而生。
             </p>
           </div>
 
@@ -73,7 +73,7 @@ export default function EndPage() {
               />
             </div>
             <span className="mt-3 text-[9px] tracking-[0.3em] opacity-60 font-pixel group-hover:opacity-100">
-              SCAN / VISIT MIHUASHI &gt;
+              SCAN / VISIT &gt;
             </span>
           </a>
         </motion.div>
